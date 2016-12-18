@@ -11,7 +11,7 @@ import java.util.List;
 public class SphereProblem extends AbstractDoubleProblem {
 
     // Constructor que recive el número de variables (dimensiones) a usar
-    public SphereProblem(Integer numberOfVariables) {
+    SphereProblem(Integer numberOfVariables) {
         setNumberOfVariables(numberOfVariables);    // número de variables (dimensiones)
         setNumberOfObjectives(1);                   // Problema monoobjetivo
         setName("Sphere Problem");                  // Nombre del problema

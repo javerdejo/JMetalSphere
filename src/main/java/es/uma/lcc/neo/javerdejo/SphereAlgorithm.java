@@ -1,6 +1,5 @@
 package es.uma.lcc.neo.javerdejo;
 
-import es.uma.lcc.neo.javerdejo.SphereFunction.SphereProblem;
 import org.uma.jmetal.algorithm.Algorithm;
 import org.uma.jmetal.algorithm.singleobjective.geneticalgorithm.GeneticAlgorithmBuilder;
 import org.uma.jmetal.operator.CrossoverOperator;

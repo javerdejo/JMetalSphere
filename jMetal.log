@@ -2,30 +2,30 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2016-12-18T18:27:04</date>
-  <millis>1482082024401</millis>
+  <date>2016-12-18T18:59:41</date>
+  <millis>1482083981713</millis>
   <sequence>0</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>es.uma.lcc.neo.javerdejo.SphereAlgorithm</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Total execution time: 672ms</message>
+  <message>Total execution time: 522ms</message>
 </record>
 <record>
-  <date>2016-12-18T18:27:04</date>
-  <millis>1482082024462</millis>
+  <date>2016-12-18T18:59:41</date>
+  <millis>1482083981806</millis>
   <sequence>1</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>org.uma.jmetal.runner.AbstractAlgorithmRunner</class>
   <method>printFinalSolutionSet</method>
   <thread>1</thread>
-  <message>Random seed: 1482082023657</message>
+  <message>Random seed: 1482083981086</message>
 </record>
 <record>
-  <date>2016-12-18T18:27:04</date>
-  <millis>1482082024463</millis>
+  <date>2016-12-18T18:59:41</date>
+  <millis>1482083981808</millis>
   <sequence>2</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Objectives values have been written to file FUN.tsv</message>
 </record>
 <record>
-  <date>2016-12-18T18:27:04</date>
-  <millis>1482082024465</millis>
+  <date>2016-12-18T18:59:41</date>
+  <millis>1482083981809</millis>
   <sequence>3</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>

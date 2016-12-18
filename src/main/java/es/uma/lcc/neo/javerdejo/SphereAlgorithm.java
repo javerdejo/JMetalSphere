@@ -21,16 +21,25 @@ import java.util.List;
 
 import static org.uma.jmetal.runner.AbstractAlgorithmRunner.printFinalSolutionSet;
 
+// Programa en JMetal que resuelve el problema de la esfera
 public class SphereAlgorithm {
     public static void main(String[] args) throws JMetalException, FileNotFoundException {
 
+        // Crea un objeto de tipo algoritmo
         Algorithm<DoubleSolution> algorithm;
+
+        // Crea un objeto de tipo problema que hace referencia a la clase que se ha creado
+        // para resolver el problema de la esfera
         DoubleProblem problem = new SphereProblem(5);
 
+        // Utilizo cruza de tipo SBX
         CrossoverOperator<DoubleSolution> crossover = new SBXCrossover(0.9, 20.0) ;
+        // Utilizo mutación polinomial
         MutationOperator<DoubleSolution> mutation  = new PolynomialMutation(1.0 / problem.getNumberOfVariables(), 20.0) ;
+        // Utilizo selección por torneo binario
         SelectionOperator<List<DoubleSolution>, DoubleSolution> selection = new BinaryTournamentSelection<DoubleSolution>(new RankingComparator<DoubleSolution>());
 
+        // Uso un algoritmo genético de población estacionaria "SSGA"
         algorithm = new GeneticAlgorithmBuilder<DoubleSolution>(problem, crossover, mutation)
                 .setSelectionOperator(selection)
                 .setMaxEvaluations(25000)
@@ -38,16 +47,22 @@ public class SphereAlgorithm {
                 .setVariant(GeneticAlgorithmBuilder.GeneticAlgorithmVariant.STEADY_STATE)
                 .build();
 
+        // Ejecuto el algoritmo
         AlgorithmRunner algorithmRunner = new AlgorithmRunner.Executor(algorithm)
                 .execute();
 
+        // Obtengo el resultado obtenido por el algoritmo
         DoubleSolution solution = algorithm.getResult();
+
+        // Asigno la solución a una población para poder usar al función printFinalSolutionSet
         List<DoubleSolution> population = new ArrayList<DoubleSolution>(1);
         population.add(solution);
 
+        // Muestro el tiempo que tardó el algoritmo
         long computingTime = algorithmRunner.getComputingTime();
         JMetalLogger.logger.info("Total execution time: " + computingTime + "ms");
 
+        // Creo los archivos FUN y VAR con los resultados obtenidos
         printFinalSolutionSet(population);
 
     }
